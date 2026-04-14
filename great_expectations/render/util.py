@@ -145,7 +145,7 @@ def substitute_none_for_missing(
     ```
 
     This is helpful for standardizing the input objects for rendering functions.
-    The alternative is lots of awkward `if "some_param" not in kwargs or kwargs["some_param"] == None:` clauses in renderers.
+    The alternative is lots of awkward `if "some_param" not in kwargs or kwargs["some_param"] is None:` clauses in renderers.
     """  # noqa: E501 # FIXME CoP
 
     new_kwargs = copy.deepcopy(kwargs)
